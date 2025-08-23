@@ -6,9 +6,18 @@
 }
 
 body {
-    background-color: blanchedalmond;
-    color: #000;
+color: #fff;
+background-image: url('./image/ChatGPT\ Image\ 23\ de\ ago.\ de\ 2025\,\ 17_09_53.png');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-blend-mode: overlay;
+background-color: rgba(0, 0, 0, 0.4);
+z-index: -1;
 }
+
+
 
 /* Estilos de navegação */
 nav ul {
@@ -43,10 +52,6 @@ nav {
     z-index: 1000;
 }
 
-/* Estilos do título */
-.titulo-principal {
-    text-align: center;
-}
 
 /* Estilos para o contêiner do mapa */
 .mapa-container {
@@ -79,10 +84,10 @@ nav {
     height: 50px;
     background-color: #ff3333;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     border: 2px solid #ffffff;
-    border-radius: 50%;
+    border-radius: 39%;
     cursor: pointer;
     z-index: 10000;
     opacity: 0;
@@ -99,3 +104,67 @@ nav {
     pointer-events: auto; /* Permite cliques quando o botão está visível */
     transform: scale(1.1);
 }
+.bloco-leitura {
+    text-align: center;
+    margin-top: 10px;
+}
+.mapa-btn {
+
+    background: #000;
+    color: #00ffff;
+    padding: 12px 24px;
+    border-radius: 25%;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 9999;
+    transition: all 0.3s ease-in-out;
+}
+.m  apa-btn:hover {
+    background: #00ffff;
+    color: black;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+    
+}
+.logo-igreja {
+    position: relative;;
+    width: 15%;
+    height: 10%;
+    margin-top: 0%;
+    transform:translateY(30px)
+
+}
+h2 {
+    margin-top: 20px;
+
+}
+p, h3 {
+    color: #fff;
+}
+
+.titulo-principal {
+    position:absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+.container-bussola{
+   position: absolute;
+    margin-top: 85px;
+    right: calc(80% - 70px);
+   
+
+}
+
+img {
+    height: 80px;
+    width: 80px;
+    transform: translateY(20px);
+}
+
+
+

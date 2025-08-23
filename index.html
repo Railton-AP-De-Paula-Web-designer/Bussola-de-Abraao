@@ -1,58 +1,60 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Bussola-abraao</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-    <ul>
-        <img class="nav-image" src="./image/google.png" alt="google-logo">
-        <li><a href="#">Nucleus Web</a></li>
-        <img class="nav-image" src="./image/youtube.png" alt="youtub-logo">
+    <header>
+        <nav>
+            <ul>
+                <img class="nav-image" src="./image/google.png" alt="google-logo">
+                <li><a href="#">Nucleus Web</a></li>
+                <img class="nav-image" src="./image/youtube.png" alt="youtub-logo">
                 <li><a href="#">Youtub</a></li>
-    </ul>
-        </nav>
-    </header>
-<div class="fechar-mapa-container">
-    <button id="fecharMapaBtn">close</button>
-</div>
+            </ul>
+        </nav>
+    </header>
 
-    <main class="container-principal">
-        <section>
+    <main>
 
-    <div class="container-bussola">
-<div>
-    <h1 class="titulo-principal">Bússola De Abraaão</h1>
-</div>
-<div class="igreja-mapa">
+        <h1 class="titulo-principal">Bússola De Abraaão</h1>
 
-    <div>
-        <h2>AD Brás Madureira</h2>
-        <h3>Ribeirão Bonito-sp</h3>
-        <p>JD. Centenario</p>
-        <p>sestílio Francioli n-618</p>
-        <button class="mapa-btn" data-igreja-id="igreja-1">Mapa</button>
-    </div>
+        <div class="container-bussola">
+            <div class="igreja-mapa">
+
+                <div class="bloco-leitura">
+           
+                        <img  src="image/ChatGPT Image 23 de ago. de 2025, 17_19_43.png">
+                   
+                    <h3 class="bloco-cidade">Ribeirão Bonito-sp</h3>
+                    <p>JD. Centenario</p>
+                    <p>sestílio Francioli n-818</p>
+                    <button class="mapa-btn" data-igreja-id="igreja-1">Mapa</button>
+                </div>
+
+                <div class="mapa-container" data-igreja-id="igreja-1">
+                    <iframe class="mapa-frame" data-igreja-id="igreja-1"
+                        src="https://www.google.com/maps/embed?pb=!4v1755923633145!6m8!1m7!1sNUxWNAmuJlvmBfBKUI1Vnw!2m2!1d-22.05532289864722!2d-48.18497398670575!3f67.32219!4f0!5f0.7820865974627469" width="600" height="450" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+        </div>
+    </main>
     
-    <div class="mapa-container" data-igreja-id="igreja-1">
-    <iframe class="mapa-frame" data-igreja-id="igreja-1" src="https://www.google.com/maps/embed?pb=!4v1755923633145!6m8!1m7!1sNUxWNAmuJlvmBfBKUI1Vnw!2m2!1d-22.05532289864722!2d-48.18497398670575!3f67.32219!4f0!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-
-</div>
+    <div class="fechar-mapa-container">
+        <button id="fecharMapaBtn">close</button>
     </div>
-                    </section>
 
-   
-    </main>
-
-    <footer>
-            </footer>
-<script src="./script.js"></script>
+    <footer>
+    </footer>
+    
+    <script src="./script.js"></script>
 </body>
 
 </html>
