@@ -12,10 +12,10 @@
     <header>
         <nav>
             <ul>
-                <img class="nav-image" src="./image/google.png" alt="google-logo">
-                <li><a href="#">Nucleus Web</a></li>
-                <img class="nav-image" src="./image/youtube.png" alt="youtub-logo">
-                <li><a href="#">Youtub</a></li>
+
+                <li> <img class="nav-image" src="./image/google.png" alt="google-logo"><a href="#">Nucleus Web</a></li>
+
+                <li> <img class="nav-image" src="./image/youtube.png" alt="youtub-logo"><a href="#">Youtub</a></li>
             </ul>
         </nav>
     </header>
@@ -24,36 +24,55 @@
 
         <h1 class="titulo-principal">Bússola De Abraaão</h1>
 
+
         <div class="container-bussola">
             <div class="igreja-mapa">
 
-                <div class="bloco-leitura">
-           
-                        <img  src="image/ChatGPT Image 23 de ago. de 2025, 17_19_43.png">
-                   
+                <div class="bloco-igreja">
+
+                    <img src="image/ChatGPT Image 23 de ago. de 2025, 17_19_43.png">
+
                     <h3 class="bloco-cidade">Ribeirão Bonito-sp</h3>
                     <p>JD. Centenario</p>
-                    <p>sestílio Francioli n-818</p>
+                    <p>sestílio Francioli №818</p>
                     <button class="mapa-btn" data-igreja-id="igreja-1">Mapa</button>
                 </div>
 
-                <div class="mapa-container" data-igreja-id="igreja-1">
-                    <iframe class="mapa-frame" data-igreja-id="igreja-1"
-                        src="https://www.google.com/maps/embed?pb=!4v1755923633145!6m8!1m7!1sNUxWNAmuJlvmBfBKUI1Vnw!2m2!1d-22.05532289864722!2d-48.18497398670575!3f67.32219!4f0!5f0.7820865974627469" width="600" height="450" style="border:0;"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-
+                        <div class="bloco-igreja">
+                                        <p>Bairro Malvinas</p>
+                                        <p>Fidelmo Cheavolone №403 </p>
+                                        <button class="mapa-btn" data-igreja-id="igreja-2">Mapa</button>
+                                    </div>
+                           
             </div>
+                   
         </div>
+
+                        <div class="mapa-container" data-igreja-id="igreja-1">
+                       <iframe class="mapa-frame" data-igreja-id="igreja-1"
+                src="https://www.google.com/maps/embed?pb=!4v1756069033549!6m8!1m7!1sNUxWNAmuJlvmBfBKUI1Vnw!2m2!1d-22.05532289864722!2d-48.18497398670575!3f69.06172847668793!4f-6.2300404317882965!5f0.7820865974627469"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+
+                <div class="mapa-container" data-igreja-id="igreja-2">
+            <iframe class="mapa-frame" data-igreja-id="igreja-2"
+                src="https://www.google.com/maps/embed?pb=!4v1756069238427!6m8!1m7!1slkv4aLGgbPV-i070rWw2jw!2m2!1d-22.06060668197051!2d-48.16696797159228!3f335.8369!4f0!5f0.7820865974627469"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+                   
+        </div>
+
+                
     </main>
-    
-    <div class="fechar-mapa-container">
-        <button id="fecharMapaBtn">close</button>
-    </div>
+
+<button class="fechar-Mapa-btn-js" style="display: none;">X</button>
 
     <footer>
     </footer>
-    
+
     <script src="./script.js"></script>
 </body>
 

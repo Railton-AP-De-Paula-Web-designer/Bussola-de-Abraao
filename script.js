@@ -1,34 +1,48 @@
-// Seleciona todos os botões de "Mostrar Mapa"
-const botoesMostrar = document.querySelectorAll('.mapa-btn');
-// Seleciona o botão de fechar por seu ID
-const botaoFechar = document.querySelector('#fecharMapaBtn');
-// Seleciona todos os containers de mapa
-const containersMapa = document.querySelectorAll('.mapa-container');
+document.addEventListener('DOMContentLoaded', () => {
+    // Seleciona todos os botões de mapa (abrir)
+    const botoesMapa = document.querySelectorAll('.mapa-btn');
 
-// Lógica para os botões que mostram o mapa
-botoesMostrar.forEach(botao => {
-    botao.addEventListener('click', () => {
-        const id = botao.dataset.igrejaId;
-        const mapa = document.querySelector(`.mapa-container[data-igreja-id="${id}"]`);
-        
-        // Esconde todos os mapas antes de mostrar o mapa certo
-        containersMapa.forEach(container => {
-            container.classList.remove('visivel');
-        });
-        
-        if (mapa) {
-            mapa.classList.add('visivel');
-            botaoFechar.classList.add('visivel'); // Torna o botão de fechar visível
-        }
-    });
-});
+    // Seleciona todos os contêineres de mapa
+    const containersMapa = document.querySelectorAll('.mapa-container');
 
-// Lógica para o botão de fechar
-botaoFechar.addEventListener('click', () => {
-    // Esconde todos os mapas
+    // Seleciona o botão de fechar
+    const fecharMapaBtn = document.querySelector('.fechar-Mapa-btn-js');
+
+    // Inicialmente, esconde todos os mapas
     containersMapa.forEach(container => {
         container.classList.remove('visivel');
     });
-    
-    botaoFechar.classList.remove('visivel'); // Esconde o botão de fechar
+    fecharMapaBtn.style.display = 'none';
+
+    // Adiciona um "ouvinte de evento" para cada botão de abrir mapa
+    botoesMapa.forEach(botao => {
+        botao.addEventListener('click', (evento) => {
+            // Esconde todos os mapas antes de mostrar o novo
+            containersMapa.forEach(container => {
+                container.classList.remove('visivel');
+            });
+
+            // Pega o ID do mapa do botão clicado
+            const igrejaId = evento.target.dataset.igrejaId;
+
+            // Encontra o mapa correspondente e o torna visível
+            containersMapa.forEach(container => {
+                if (container.dataset.igrejaId === igrejaId) {
+                    container.classList.add('visivel');
+                }
+            });
+
+            fecharMapaBtn.style.display = 'flex'; // Exibe o botão de fechar
+        });
+    });
+
+    // Adiciona o "ouvinte de evento" para o botão de fechar
+    fecharMapaBtn.addEventListener('click', () => {
+        // Esconde todos os mapas, fechando o que estiver visível
+        containersMapa.forEach(container => {
+            container.classList.remove('visivel');
+        });
+
+        fecharMapaBtn.style.display = 'none'; // Esconde o botão de fechar
+    });
 });
