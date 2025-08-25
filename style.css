@@ -271,10 +271,12 @@ img {
     border-radius: 50%;
     box-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
 }
-#bandeira-foote {
+#bandeira-footer {
     width: 35px;
     height: 35px;
     border-radius: 50%;
+    transform: translateX(5px);
+    margin-right: 5px;
     box-shadow: 0 0 5px rgba(0, 255, 255, 0.6);
 }
 .brazil-flag-container p {
@@ -372,6 +374,12 @@ img {
         align-items: center;
         gap: 40px;
     }
+    .footer-brand,
+    .footer-social-links,
+    .footer-legal-links {
+        flex-basis: 100%;
+        text-align: center;
+    }
     .footer-brand h3,
     .brasil-flag-container {
         justify-content: center;
@@ -398,6 +406,9 @@ img {
     .developer-info,
     .footer-coopyright {
         text-align: center;
+    }
+    #bandeira-footer {
+        border-radius: 50%;
     }
 }
 
