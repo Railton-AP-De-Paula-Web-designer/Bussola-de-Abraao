@@ -45,4 +45,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         fecharMapaBtn.style.display = 'none'; // Esconde o botão de fechar
     });
+
+    // --- CÓDIGO NOVO: INSERIR AQUI ---
+    // Adiciona o "ouvinte de evento" para toques na tela.
+    // Isso garante que o botão de fechar funcione em celulares e tablets.
+    fecharMapaBtn.addEventListener('touchstart', (event) => {
+        event.preventDefault(); // Impede o comportamento padrão do navegador em um toque.
+        
+        containersMapa.forEach(container => {
+            container.classList.remove('visivel');
+        });
+
+        fecharMapaBtn.style.display = 'none';
+    });
+    // --- FIM DO CÓDIGO NOVO ---
 });

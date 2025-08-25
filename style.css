@@ -91,6 +91,7 @@ nav {
     right: 20px;
     width: 50px;
     height: 50px;
+    padding: 10px;
     background-color: #ff3333;
     color: #ffffff;
     font-size: 18px;
@@ -180,12 +181,7 @@ justify-content:flex-start;
  
 
 }
-.igreja-mapa {
-    /*mantem os blocos de igreja lado a lado e centralizados*/
-   display: flex;
-   display: table-column;
-justify-content: start;
-}
+
 
 img {
     height: 80px;
@@ -210,7 +206,52 @@ img {
     margin-top: -17px;
 }
 
+@media screen and (max-width: 768px) {
+    /*navegação: muda para uma lista vertical*/
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    /*conteudo principal: adiciona espaçamento nas laterais*/
+    main {
+        padding: 0 15px;
+    }
+    .titulo-principal {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .titulo-principal::before {
+        width: 40px;
+        height: 40px;
+    }
+    .container-bussola {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+        gap: 30px;
+        padding: 0 15px;
+    }
+    .igreja-mapa {
+        flex-direction: column;
+        align-items: flex-start;
+       
+    }
+    .bloco-igreja {
+        text-align: left;
+    }
 
+      
+    
+  
+     
+    
+    .fechar-mapa-btn-js {
+        width: 70px;
+        height: 70px;
+        font-size: 22px;
+    }
+}
 
 
 
